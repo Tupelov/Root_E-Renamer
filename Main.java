@@ -7,6 +7,7 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
+		Runtime rt = Runtime.getRuntime();
 		File file = new File("./list.txt");
 		Scanner scan = new Scanner(file);
 		//System.out.println(scan.nextLine());
