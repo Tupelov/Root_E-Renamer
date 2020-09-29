@@ -25,13 +25,16 @@ public class Main {
 		System.out.println(directory.isDirectory());
 		
 		File[] filesInside = directory.listFiles();
+		
+		File dir = new File("./output");
+		dir.mkdir();
 		//change to arraylist size when done testing
 		for(int i=0;i< filesInside.length;i++) {
 			File temp = filesInside[i];
 			String name = temp.getName();
 			//name = name.substring(name.length()-4);
 			//System.out.println(name);
-			File rename = new File("./output"+list.get(i)+".wav");
+			File rename = new File("./output",list.get(i)+".wav");
 			temp.renameTo(rename);
 		}
 		
